@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test de Salud Mental</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      body {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <H2>Datos básicos</H2>
+    <ul>
+        <li>Nombre: Pepito </li>
+        <li>Apellido: Gomez Peres</li>
+        <li>Edad: 30años</li>
+        <li>Identificación: 42056887</li>
+    </ul>
+
+    <h2>Test de Salud Mental</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Pregunta</th>
+          <th>Respuesta</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Aquí se agregarán las filas de la tabla -->
+      </tbody>
+      
+    </table>
+<p><strong>Resultado:</strong>  Su estado de animo y salud mental es BUENO 😀</p>
+    <!-- <script>
+      // Función para agregar una fila a la tabla
+      function agregarFila(id, pregunta, respuesta) {
+        var tableBody = document.getElementById("table-body");
+        var newRow = tableBody.insertRow();
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+
+        cell1.textContent = id;
+        cell2.textContent = pregunta;
+        cell3.textContent = respuesta;
+      }
+
+      // Función para obtener respuestas mediante prompt y agregarlas a la tabla
+      function obtenerRespuestas() {
+        for (var i = 1; i <= 6; i++) {
+          var pregunta = "";
+          var respuesta = "";
+
+          switch (i) {
+            case 1:
+              pregunta =
+                "¿Te sientes triste o deprimido(a) la mayor parte del tiempo?";
+              respuesta = prompt(pregunta + " (Si / No)").toUpperCase();
+              break;
+            case 2:
+              pregunta =
+                "¿Has perdido interés o placer en actividades que solías disfrutar?";
+              respuesta = prompt(pregunta + " (Si / No)").toUpperCase();
+              break;
+            case 3:
+              pregunta = "¿Tienes problemas para dormir o duermes demasiado?";
+              respuesta = prompt(pregunta + " (Si / No)").toUpperCase();
+              break;
+            case 4:
+              pregunta = "¿Te sientes cansado(a) o con poca energía?";
+              respuesta = prompt(pregunta + " (Si / No)").toUpperCase();
+              break;
+            case 5:
+              pregunta = "¿Cómo describirías tu estado de ánimo general?";
+              respuesta = prompt(
+                pregunta + " (Bueno / Regular / Malo)"
+              ).toUpperCase();
+              break;
+            case 6:
+              pregunta = "¿Crees que tus metas pueden lograrse en corto tiempo?";
+              respuesta = prompt(
+                pregunta + " (Claro / Es posible / No)"
+              ).toUpperCase();
+              break;
+          }
+
+          agregarFila(i, pregunta, respuesta);
+        }
+      }
+
+      // Llamar a la función para obtener respuestas al cargar la página (solo para fines de demostración)
+      obtenerRespuestas();
+    </script> -->
+  </body>
+</html>
