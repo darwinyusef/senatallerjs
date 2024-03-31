@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS vs Tailwind</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* CSS */
+    .element {
+      width: 100px;
+      height: 100px;
+      background-color: #3490dc;
+      margin-bottom: 20px;
+    }
+    /* Transform */
+    .transform {
+      transform: rotate(45deg);
+    }
+    .transition {
+      transition: width 2s;
+    }
+    /* Transiciones */
+    .duration-500 {
+      transition-duration: 0.5s;
+    }
+    .ease-in {
+      transition-timing-function: ease-in;
+    }
+    .delay-200 {
+      transition-delay: 0.2s;
+    }
+    /* Animaciones */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .animate-spin {
+      animation: spin 2s linear infinite;
+    }
+    .animate-ping {
+      animation-name: ping;
+    }
+    @keyframes ping {
+      75%, 100% { transform: scale(2); opacity: 0; }
+    }
+    .duration-300 {
+      animation-duration: 0.3s;
+    }
+    .delay-500 {
+      animation-delay: 0.5s;
+    }
+    .animate-bounce {
+      animation-name: bounce;
+      animation-iteration-count: infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(-25%); }
+      50% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <!-- Transform -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Transformaciones:</h2>
+    <div class="element transform rotate-45"></div>
+  </div>
+
+  <!-- Transiciones -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Transiciones:</h2>
+    <div class="element transition"></div>
+  </div>
+
+  <!-- Animaciones -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Animaciones:</h2>
+    <div class="element animate-spin"></div>
+    <div class="element animate-ping"></div>
+    <div class="element duration-300"></div>
+    <div class="element delay-500"></div>
+    <div class="element animate-bounce"></div>
+  </div>
+
+</body>
+</html>

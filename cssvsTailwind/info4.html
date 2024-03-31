@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML y CSS - Propiedades adicionales</title>
+    <style>
+      /* Clip path */
+      .clip-full {
+        width: 200px;
+        height: 200px;
+        background-color: #f59e0b;
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+      }
+
+      .element {
+        width: 100px;
+        height: 100px;
+        background-color: #10b981;
+        will-change: auto;
+        transition: background-color 300ms ease-in-out;
+      }
+
+      .element:hover {
+        background-color: red;
+      }
+      .juntos {
+        position: relative;
+      }
+
+      .fondo {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        isolation: isolate;
+      }
+      /* Isolation */
+      .isolation-isolate {
+        width: 150px;
+        height: 150px;
+        background-color: #3b82f6;
+        mix-blend-mode: difference;
+
+        position: absolute;
+      }
+      /* Shape outside */
+      .shape-outside.circle {
+        width: 150px;
+        height: 150px;
+        background-color: #ef4444;
+        float: left;
+        shape-outside: circle(50%);
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <!-- Clip path -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Ruta de recorte:</h2>
+      <div class="clip-full"></div>
+    </div>
+
+    <!-- Will change -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Cambio futuro:</h2>
+      <div class="element"></div>
+    </div>
+
+    <!-- Isolation -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Aislamiento de capa:</h2>
+      <div class="juntos">
+        <div class="isolation-isolate"></div>
+        <div class="fondo"></div>
+      </div>
+    </div>
+
+    <!-- Shape outside -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Forma exterior:</h2>
+      <div class="shape-outside circle"></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in
+        lacus ut libero posuere tincidunt.
+      </p>
+    </div>
+  </body>
+</html>

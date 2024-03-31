@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS vs Tailwind - Animaciones</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* CSS */
+    .element {
+      width: 100px;
+      height: 100px;
+      background-color: #34d399;
+      margin-bottom: 20px;
+    }
+    /* Animaciones */
+    @keyframes ping {
+      75%, 100% { transform: scale(2); opacity: 0; }
+    }
+    .animate-ping {
+      animation-name: ping;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(-25%); }
+      50% { transform: translateY(0); }
+    }
+    .animate-bounce {
+      animation-name: bounce;
+      animation-iteration-count: infinite;
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <!-- Nombre de la animación -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Nombre de la animación:</h2>
+    <div class="element animate-ping"></div>
+  </div>
+
+  <!-- Duración de la animación -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Duración de la animación:</h2>
+    <div class="element duration-300"></div>
+  </div>
+
+  <!-- Retraso de la animación -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Retraso de la animación:</h2>
+    <div class="element delay-500"></div>
+  </div>
+
+  <!-- Cuenta de iteraciones -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Cuenta de iteraciones:</h2>
+    <div class="element animate-bounce"></div>
+  </div>
+
+  <!-- Dirección de la animación -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Dirección de la animación:</h2>
+    <div class="element animate-bounce"></div>
+  </div>
+
+  <!-- Modo de relleno de animación -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Modo de relleno de animación:</h2>
+    <div class="element animate-ping"></div>
+  </div>
+
+  <!-- Estado de reproducción de animación -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Estado de reproducción de animación:</h2>
+    <div class="element animate-spin"></div>
+  </div>
+
+</body>
+</html>

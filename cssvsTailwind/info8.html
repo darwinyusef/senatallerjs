@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML y CSS - Propiedades adicionales con CSS</title>
+  <style>
+    /* Shape outside */
+    .shape-outside.circle {
+      width: 150px;
+      height: 150px;
+      background-color: #10b981;
+      float: left;
+      shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+
+    /* Margen */
+    .m-4 {
+      margin: 16px;
+    }
+
+    /* Margen superior */
+    .mt-8 {
+      margin-top: 32px;
+    }
+
+    /* Margen derecho */
+    .mr-12 {
+      margin-right: 48px;
+    }
+
+    /* Margen inferior */
+    .mb-16 {
+      margin-bottom: 64px;
+    }
+
+    /* Margen izquierdo */
+    .ml-20 {
+      margin-left: 80px;
+    }
+
+    /* Relleno */
+    .p-6 {
+      padding: 24px;
+    }
+
+    /* Relleno superior */
+    .pt-10 {
+      padding-top: 40px;
+    }
+
+    /* Relleno derecho */
+    .pr-16 {
+      padding-right: 32px;
+    }
+
+    /* Relleno inferior */
+    .pb-20 {
+      padding-bottom: 48px;
+    }
+
+    /* Relleno izquierdo */
+    .pl-24 {
+      padding-left: 64px;
+    }
+
+    /* Ancho */
+    .w-1/2 {
+      width: 50%;
+    }
+
+    /* Ancho mínimo */
+    .min-w-64 {
+      min-width: 256px;
+    }
+
+    /* Ancho máximo */
+    .max-w-3xl {
+      max-width: 48rem;
+    }
+
+    /* Altura */
+    .h-64 {
+      height: 256px;
+    }
+
+    /* Altura mínima */
+    .min-h-screen {
+      min-height: 100vh;
+    }
+
+    /* Altura máxima */
+    .max-h-96 {
+      max-height: 24rem;
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <!-- Forma exterior -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Forma exterior:</h2>
+    <div class="shape-outside circle"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in lacus ut libero posuere tincidunt.</p>
+  </div>
+
+  <!-- Margen -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Margen:</h2>
+    <div class="m-4 bg-blue-200">Contenido con margen</div>
+  </div>
+
+  <!-- Relleno -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Relleno:</h2>
+    <div class="p-6 bg-green-200">Contenido con relleno</div>
+  </div>
+
+  <!-- Ancho -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Ancho:</h2>
+    <div class="w-1/2 bg-yellow-200">Contenido con ancho del 50%</div>
+  </div>
+
+  <!-- Altura -->
+  <div class="mb-8">
+    <h2 class="text-lg font-semibold mb-2">Altura:</h2>
+    <div class="h-64 bg-purple-200">Contenido con altura de 256px</div>
+  </div>
+
+</body>
+</html>

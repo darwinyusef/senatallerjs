@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS - Propiedades adicionales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="p-4">
+    <h1 class="text-3xl font-bold underline text-clifford">Hello world!</h1>
+    <!-- Desbordamiento -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Desbordamiento:</h2>
+      <div class="overflow-hidden bg-gray-300 w-32 h-32">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+        esse soluta a. Ea, atque. Nam molestiae corporis excepturi alias quo
+        qui? Eos eveniet illum assumenda ducimus cum possimus necessitatibus
+        tempora.
+      </div>
+      <div class="overflow-x-hidden bg-gray-300 w-32 h-32 mt-4">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas vero
+        perspiciatis debitis earum eveniet deleniti tempora incidunt consequatur
+        impedit accusantium suscipit, deserunt dolorem iure voluptatibus sint
+        ullam. Repellat, libero esse.
+      </div>
+      <div class="overflow-y-hidden bg-gray-300 w-32 h-32 mt-4 text-nowrap">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas vero
+        perspiciatis debitis earum eveniet deleniti tempora incidunt consequatur
+        impedit accusantium suscipit, deserunt dolorem iure voluptatibus sint
+        ullam. Repellat, libero esse.
+      </div>
+    </div>
+
+    <!-- Índice z -->
+    <div class="mb-8 relative">
+      <h2 class="text-lg font-semibold mb-2 z-10 absolute top-10">Índice z:</h2>
+      <div class="bg-gray-300 w-32 h-32">Contenido</div>
+    </div>
+
+    <!-- Eventos del puntero -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 gap-10 px-0 sm:px-10 font-mono font-bold"
+    >
+      <div class="flex flex-col">
+        <p
+          class="font-medium text-sm text-slate-500 font-mono mb-3 dark:text-slate-400"
+        >
+          pointer-events-auto
+        </p>
+        <div class="relative rounded-lg shadow-sm w-full">
+          <div
+            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-auto"
+          >
+            <svg
+              class="absolute text-slate-400 h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <input
+            type="text"
+            placeholder="Search"
+            class="font-sans block text-sm w-full pl-10 py-2 px-3 ring-1 ring-slate-900/10 text-slate-500 rounded-lg dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-400"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <p
+          class="font-medium text-sm text-slate-500 font-mono mb-3 dark:text-slate-400"
+        >
+          pointer-events-none
+        </p>
+        <div class="relative rounded-lg shadow-sm w-full">
+          <div
+            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+          >
+            <svg
+              class="absolute text-slate-400 h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <input
+            type="text"
+            placeholder="Search"
+            class="font-sans block text-sm w-full pl-10 py-2 px-3 ring-1 ring-slate-900/10 text-slate-500 rounded-lg dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-400"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Cambiar tamaño -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Cambiar tamaño:</h2>
+      <textarea class="resize bg-gray-300 w-32 h-16"></textarea>
+    </div>
+
+    <!-- Cursor -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Cursor:</h2>
+      <button class="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded">
+        Botón
+      </button>
+    </div>
+
+    <!-- Selección del usuario -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Selección del text:</h2>
+      <div class="select-all bg-gray-300 w-32 h-32 text-wrap overflow-scroll">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident
+        illum officia cum perferendis eum nisi accusantium dolore ullam. Nulla
+        vel esse neque tempore fugit voluptatibus saepe aperiam libero illum?
+      </div>
+    </div>
+
+    <!-- Filtro -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Filtro:</h2>
+      <img
+        class="cursor-pointer filter hover:grayscale hover:drop-shadow-xl bg-gray-300 w-32 h-32 overflow-hidden"
+        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExczlweDJzOGQ2amtqYW41Z2R0Nm9icmpqaGN2NGM1YWw4dG1ubDZuMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VdW96O9QVNXkkharuG/giphy.gif"
+        alt=""
+      />
+    </div>
+
+    <!-- Filtro de fondo -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Filtro de fondo:</h2>
+      <div
+        class="group pt-12 w-32 h-32 bg-cover overflow-hidden bg-[url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTVyOThwMzRibnYyNXl3NWUxbjVvZ3Nrd2Z1MTYxZDV4YXFiNGU0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B0WZilpDygwY6ewtYt/giphy.gif')]"
+        alt=""
+      >
+        <p class="hidden group-hover:block font-bold	backdrop-brightness-200 bg-yellow/30 w-full h-6 text-center">
+          Aqui un texto
+        </p>
+      </div>
+    </div>
+
+    <!-- Modo de mezcla -->
+  </body>
+</html>

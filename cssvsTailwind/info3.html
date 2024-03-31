@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS vs Tailwind - Propiedades Adicionales</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* CSS */
+      .element {
+        width: 100px;
+        height: 100px;
+        background-color: #fcd34d;
+        margin-bottom: 20px;
+      }
+      /* Transformaciones */
+      .origin-center {
+        transform-origin: center;
+      }
+      .scale-150 {
+        transform: scale(1.5);
+      }
+      .rotate-90 {
+        transform: rotate(90deg);
+      }
+      .skew-x-6 {
+        transform: skewX(6deg);
+      }
+      .-translate-x-4 {
+        transform: translateX(-4px);
+      }
+
+      /* Propiedades de borde */
+      .rounded-lg {
+        border-radius: 8px;
+      }
+      .border-4 {
+        border-width: 8px;
+        border-style: dashed;
+        border-color: rgb(22, 1, 255) rgba(209, 78, 12, 0.6) rgb(53, 69, 53);
+      }
+      .border-dashed {
+        border: 1px solid red;
+        border-style: dashed;
+      }
+      .border-collapse {
+        border-collapse: collapse;
+        border-spacing: 0px;
+      }
+
+      table.border-collapse tbody tr > td {
+        border: 4px solid;
+        border-color: rgb(22, 1, 255) rgba(209, 78, 12, 0.6) rgb(53, 69, 53);
+      }
+      table.border-separate tbody tr td {
+        border: 4px solid;
+        border-color: red rgba(170, 50, 220, 0.6) green;
+      }
+
+      .border-separate {
+        border-collapse: separate;
+        border-spacing: 10px;
+      }
+      
+
+      .junto {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .outline-none {
+        outline: 4px solid red;
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <!-- Transformaciones -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Transformaciones:</h2>
+      <div class="element origin-center"></div>
+      <div class="element scale-150"></div>
+      <div class="element rotate-90"></div>
+      <div class="element skew-x-6"></div>
+      <div class="element -translate-x-4"></div>
+      <div class="element perspective-500"></div>
+      <div class="element backface-visible"></div>
+    </div>
+
+    <!-- Propiedades de borde -->
+    <div class="mb-8">
+      <h2 class="text-lg font-semibold mb-2">Propiedades de borde:</h2>
+      <div class="element rounded-lg"></div>
+      <div class="element border-4"></div>
+      <div class="element border-dashed"></div>
+      <div class="junto">
+        <table class="border-separate">
+          <tbody>
+            <tr>
+              <td>Cell 1.1</td>
+              <td>Cell 1.2</td>
+            </tr>
+            <tr>
+              <td>Cell 2.1</td>
+              <td>Cell 2.2</td>
+            </tr>
+            <tr>
+              <td>Cell 3.1</td>
+              <td>Cell 3.2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="junto">
+        <table class="border-collapse">
+          <tbody>
+            <tr>
+              <td>Cell 1.1</td>
+              <td>Cell 1.2</td>
+            </tr>
+            <tr>
+              <td>Cell 2.1</td>
+              <td>Cell 2.2</td>
+            </tr>
+            <tr>
+              <td>Cell 3.1</td>
+              <td>Cell 3.2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="element outline-none"></div>
+    </div>
+  </body>
+</html>
