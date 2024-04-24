@@ -1,0 +1,75 @@
+/*para buscarlas las encontramos en color hex*/
+:root {
+    --box-green: #c1ffb6;
+    --box-red: #de3163;
+    --box-pink: #c4cdff;
+    --box-mored: #e41e3f;
+    --box-gray: #4c4c4c;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Arrancamos con Flexbox*/
+.container-flex {
+    background-color: lightgray;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-flow: row wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.container,
+.container-fluid {
+    background-color: lightgray;
+}
+
+.row {
+    background-color: rgb(179, 179, 179);
+}
+
+.box {
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    max-height: 100%;
+}
+
+.box1 {
+    background-color: var(--box-green) !important;
+    /* order: 3; */
+}
+
+.box2 {
+    background-color: var(--box-red) !important;
+    /* order: 2; */
+}
+
+.box3 {
+    background-color: var(--box-pink) !important;
+    /* order: 4; */ 
+}
+
+.box4 {
+    background-color: var(--box-mored) !important;
+    /* order: 4; */ 
+}
+
+.box5 {
+    background-color: var(--box-gray) !important;
+    /* order: 4; */
+}
+
+.box6 {
+    background-color: lightgoldenrodyellow;
+    /* order: 1;
+     align-self: flex-end;*/
+}
